@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
@@ -10,7 +11,6 @@ class ButtonPanel extends React.Component {
   }
 
   handleClick(buttonName) {
-    // eslint-disable-next-line react/prop-types
     const { clickHandler } = this.props;
     clickHandler(buttonName);
   }
@@ -52,6 +52,6 @@ class ButtonPanel extends React.Component {
   }
 }
 
-ButtonPanel.protoTypes = { clickHandler: PropTypes.func };
+ButtonPanel.propTypes = { clickHandler: PropTypes.func };
 
 export default ButtonPanel;
