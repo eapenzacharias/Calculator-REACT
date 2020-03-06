@@ -17,35 +17,35 @@ class ButtonPanel extends React.Component {
 
   render() {
     return (
-      <div className="container-button-panel">
-        <div className="col btn-col">
-          <Button buttonName="AC" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="+/-" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="%" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="/" clickHandler={this.handleClick} cssClass="bg-orange btn small" />
+      <div className="button-panel">
+        <div className="btn-col">
+          <Button buttonName="AC" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="+/-" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="%" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="/" clickHandler={this.handleClick} size="small" />
         </div>
-        <div className="col btn-col">
-          <Button buttonName="7" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="8" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="9" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="x" clickHandler={this.handleClick} cssClass="bg-orange btn small" />
+        <div className="btn-col">
+          <Button buttonName="7" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="8" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="9" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="x" clickHandler={this.handleClick} size="small" />
         </div>
-        <div className="col btn-col">
-          <Button buttonName="4" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="5" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="6" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="-" clickHandler={this.handleClick} cssClass="bg-orange btn small" />
+        <div className="btn-col">
+          <Button buttonName="4" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="5" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="6" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="-" clickHandler={this.handleClick} size="small" />
         </div>
-        <div className="col btn-col">
-          <Button buttonName="1" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="2" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="3" clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="+" clickHandler={this.handleClick} cssClass="bg-orange btn small" />
+        <div className="btn-col">
+          <Button buttonName="1" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="2" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="3" clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="+" clickHandler={this.handleClick} size="small" />
         </div>
-        <div className="col btn-col">
-          <Button buttonName="0" clickHandler={this.handleClick} colour="bkg-grey" size="btn-big" />
-          <Button buttonName="." clickHandler={this.handleClick} cssClass="bg-grey btn small" />
-          <Button buttonName="=" clickHandler={this.handleClick} cssClass="bg-orange btn small" />
+        <div className="btn-col">
+          <Button buttonName="0" clickHandler={this.handleClick} size="big" color="grey" />
+          <Button buttonName="." clickHandler={this.handleClick} size="small" color="grey" />
+          <Button buttonName="=" clickHandler={this.handleClick} size="small" />
         </div>
       </div>
     );
