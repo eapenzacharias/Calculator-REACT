@@ -17,16 +17,17 @@ class Button extends React.Component {
   }
 
   render() {
-    const { cssClass, buttonName } = this.props;
+    const { color, wide, buttonName } = this.props;
     return (
-      <button className={`button ${cssClass}`} onClick={this.handleClick} type="button">{buttonName}</button>
+      <button className={`btn ${wide ? 'wide' : 'small'} bg-${color || 'orange'}`} onClick={this.handleClick} type="button">{buttonName}</button>
     );
   }
 }
 
 Button.propTypes = {
   buttonName: PropTypes.string,
-  cssClass: PropTypes.string,
+  wide: PropTypes.bool,
+  color: PropTypes.string,
   clickHandler: PropTypes.func,
 };
 
