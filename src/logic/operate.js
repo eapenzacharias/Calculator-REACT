@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import Big from 'big.js';
 
 function operate(x, y, operation) {

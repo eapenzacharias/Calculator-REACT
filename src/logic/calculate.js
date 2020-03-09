@@ -1,25 +1,27 @@
+/* eslint-disable no-console */
 import operate from './operate';
 
 function calculate(btn, calculator) {
+  let cal = calculator;
   switch (btn) {
     case 'AC':
-      calculator = {
+      cal = {
         total: null,
         next: null,
         operation: null,
       };
       break;
     case '+/-':
-      calculator.next *= -1;
+      cal.next *= -1;
       break;
     case '+':
     case '-':
     case 'x':
     case '/':
     case '%':
-      calculator.operation = btn;
-      calculator.total = calculator.next;
-      calculator.next = null;
+      cal.operation = btn;
+      cal.total = cal.next;
+      cal.next = null;
       break;
     case '0':
     case '1':
@@ -32,21 +34,21 @@ function calculate(btn, calculator) {
     case '8':
     case '9':
     case '.':
-      if (!calculator.next) {
-        calculator.next = btn;
+      if (!cal.next) {
+        cal.next = btn;
       } else {
-        calculator.next += btn;
+        cal.next += btn;
       }
       break;
     case '=':
-      calculator.total = operate(calculator.total, calculator.next, calculator.operation).toString();
-      calculator.next = null;
+      cal.total = operate(cal.total, cal.next, cal.operation).toString();
+      cal.next = null;
       break;
     default:
       console.error('Button switch error');
       break;
   }
-  return calculator;
+  return cal;
 }
 
 export default calculate;
