@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-import Big from 'big.js';
+import Big from 'big.js'; // eslint-disable-line
 
 function operate(x, y, operation) {
   switch (operation) {
