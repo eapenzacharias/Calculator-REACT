@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       total: '0',
       next: null,
-      operations: null,
+      operations: null, // eslint-disable-line react/no-unused-state
     };
 
     this.handleClick = this.handleClick.bind(this);
