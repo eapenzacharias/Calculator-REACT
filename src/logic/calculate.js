@@ -2,26 +2,24 @@
 import operate from './operate';
 
 function calculate(btn, calculator) {
-  let cal = calculator;
+  let { total, next, operation } = calculator;
   switch (btn) {
     case 'AC':
-      cal = {
-        total: null,
-        next: null,
-        operation: null,
-      };
+      total = null;
+      next = null;
+      operation = null;
       break;
     case '+/-':
-      cal.next *= -1;
+      next *= -1;
       break;
     case '+':
     case '-':
     case 'x':
     case '/':
     case '%':
-      cal.operation = btn;
-      cal.total = cal.next;
-      cal.next = null;
+      operation = btn;
+      total = next;
+      next = null;
       break;
     case '0':
     case '1':
@@ -34,21 +32,21 @@ function calculate(btn, calculator) {
     case '8':
     case '9':
     case '.':
-      if (!cal.next) {
-        cal.next = btn;
+      if (!next) {
+        next = btn;
       } else {
-        cal.next += btn;
+        next += btn;
       }
       break;
     case '=':
-      cal.total = operate(cal.total, cal.next, cal.operation).toString();
-      cal.next = null;
+      total = operate(total, next, operation).toString();
+      next = null;
       break;
     default:
       console.error('Button switch error');
       break;
   }
-  return cal;
+  return { total, next, operation };
 }
 
 export default calculate;
