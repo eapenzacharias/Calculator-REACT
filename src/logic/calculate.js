@@ -1,16 +1,17 @@
 /* eslint-disable no-console */
 import operate from './operate';
+import Big from 'big.js'; // eslint-disable-line
 
 function calculate(btn, calculator) {
   let { total, next, operation } = calculator;
   switch (btn) {
     case 'AC':
-      total = null;
+      total = '0';
       next = null;
       operation = null;
       break;
     case '+/-':
-      next *= -1;
+      next = Big(next).times(-1);
       break;
     case '+':
     case '-':
@@ -40,7 +41,7 @@ function calculate(btn, calculator) {
       break;
     case '=':
       total = operate(total, next, operation).toString();
-      next = null;
+      next = total;
       break;
     default:
       console.error('Button switch error');
