@@ -11,7 +11,11 @@ function calculate(btn, calculator) {
       operation = null;
       break;
     case '+/-':
-      next = Big(next).times(-1);
+      if (!next) {
+        next = '-';
+      } else {
+        next = `-${next}`;
+      }
       break;
     case '+':
     case '-':
