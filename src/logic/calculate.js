@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import operate from './operate';
-import Big from 'big.js'; // eslint-disable-line
 
 function calculate(btn, calculator) {
   let { total, next, operation } = calculator;
