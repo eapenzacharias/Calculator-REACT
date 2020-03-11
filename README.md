@@ -1,6 +1,5 @@
 # Calculator - REACT
 
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/8f02be7323d3c4762804/maintainability)](https://codeclimate.com/github/eapenzacharias/Calculator-REACT/maintainability)
 
 An easy to use REACT Calculator project
