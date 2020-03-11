@@ -1,5 +1,7 @@
 # Calculator - REACT
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eapenzacharias/Calculator-REACT.svg)](https://greenkeeper.io/)
+
 An easy to use REACT Calculator project
 
 ## Project
