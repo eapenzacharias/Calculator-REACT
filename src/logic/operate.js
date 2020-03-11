@@ -37,9 +37,7 @@ function operate(x, y, operation) {
         result = 'Error in operation Switch';
         break;
     }
-  } catch (error) {
-    result = 'Error! Press AC';
-  }
+  } catch (error) { result = 'Error! Press AC'; }
   return result;
 }
 
