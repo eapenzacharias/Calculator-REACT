@@ -1,33 +1,46 @@
-/* eslint-disable no-console */
 import Big from 'big.js'; // eslint-disable-line
 
+function divideNum(x, y) {
+  if (y === '0') {
+    return 'You cannot divide by 0';
+  }
+  return Big(x).div(y);
+}
+
+function modNum(x, y) {
+  if (y === '0') {
+    return 'You cannot divide by 0';
+  }
+  return Big(x).mod(y);
+}
+
 function operate(x, y, operation) {
+  let result = '';
   try {
     switch (operation) {
       case '+':
-        return Big(x).plus(y);
+        result = Big(x).plus(y);
+        break;
       case '-':
-        return Big(x).minus(y);
+        result = Big(x).minus(y);
+        break;
       case 'x':
-        return Big(x).times(y);
+        result = Big(x).times(y);
+        break;
       case '/':
-        if (y === '0') {
-          return 'You cannot divide by 0';
-        }
-        return Big(x).div(y);
+        result = divideNum(x, y);
+        break;
       case '%':
-        if (y === '0') {
-          return 'You cannot divide by 0';
-        }
-        return Big(x).mod(y);
+        result = modNum(x, y);
+        break;
       default:
-        console.error('Error in operation Switch');
+        result = 'Error in operation Switch';
         break;
     }
   } catch (error) {
-    return 'Error! Press AC';
+    result = 'Error! Press AC';
   }
-  return 0;
+  return result;
 }
 
 export default operate;
