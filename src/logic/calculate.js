@@ -5,12 +5,16 @@ function calculate(btn, calculator) {
   let { total, next, operation } = calculator;
   switch (btn) {
     case 'AC':
-      total = null;
+      total = '0';
       next = null;
       operation = null;
       break;
     case '+/-':
-      next *= -1;
+      if (!next) {
+        next = '-';
+      } else {
+        next = `-${next}`;
+      }
       break;
     case '+':
     case '-':
@@ -40,7 +44,7 @@ function calculate(btn, calculator) {
       break;
     case '=':
       total = operate(total, next, operation).toString();
-      next = null;
+      next = total;
       break;
     default:
       console.error('Button switch error');
