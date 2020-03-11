@@ -15,33 +15,24 @@ class ButtonPanel extends React.Component {
     clickHandler(buttonName);
   }
 
+  renderCol(arr) {
+    return (
+      <div className="btn-col">
+        <Button buttonName={arr[0]} clickHandler={this.handleClick} color="grey" />
+        <Button buttonName={arr[1]} clickHandler={this.handleClick} color="grey" />
+        <Button buttonName={arr[2]} clickHandler={this.handleClick} color="grey" />
+        <Button buttonName={arr[3]} clickHandler={this.handleClick} />
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="button-panel">
-        <div className="btn-col">
-          <Button buttonName="AC" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="+/-" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="%" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="/" clickHandler={this.handleClick} />
-        </div>
-        <div className="btn-col">
-          <Button buttonName="7" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="8" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="9" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="x" clickHandler={this.handleClick} />
-        </div>
-        <div className="btn-col">
-          <Button buttonName="4" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="5" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="6" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="-" clickHandler={this.handleClick} />
-        </div>
-        <div className="btn-col">
-          <Button buttonName="1" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="2" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="3" clickHandler={this.handleClick} color="grey" />
-          <Button buttonName="+" clickHandler={this.handleClick} />
-        </div>
+        {this.renderCol(['AC', '+/-', '%', '/'])}
+        {this.renderCol(['7', '8', '9', 'x'])}
+        {this.renderCol(['4', '5', '6', '-'])}
+        {this.renderCol(['1', '2', '3', '+'])}
         <div className="btn-col">
           <Button buttonName="0" clickHandler={this.handleClick} wide color="grey" />
           <Button buttonName="." clickHandler={this.handleClick} color="grey" />
